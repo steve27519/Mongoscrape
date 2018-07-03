@@ -1,0 +1,27 @@
+{
+  "name": "mongoscrape",
+  "version": "1.0.0",
+  "description": "Will allow scraping of articles that users can view and leave comments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steve27519/Mongoscrape.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steve27519/Mongoscrape/issues"
+  },
+  "homepage": "https://github.com/steve27519/Mongoscrape#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.1.7",
+    "request": "^2.87.0"
+  }
+}
