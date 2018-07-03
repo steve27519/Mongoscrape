@@ -3,8 +3,8 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var path = require("path");
-var Note = require("./models/Note.js");
-var Article = require("./models/Article.js");
+var Note = require("./models/notes.js");
+var Article = require("./models/articles.js");
 var request = require("request");
 var cheerio = require("cheerio");
 
@@ -46,11 +46,18 @@ app.get("/", function (req, res) {
     Article.find({
         "saved": false
     }, function (error, data) {
-        var hbsObject = {
+        if (error) {
+            console.log (error)
+        } else {
+             var hbsObject = {
             article: data
         };
         console.log(hbsObject);
         res.render("home", hbsObject);
+
+        }
+        
+       
     });
 });
 

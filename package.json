@@ -23,5 +23,8 @@
     "express-handlebars": "^3.0.0",
     "mongoose": "^5.1.7",
     "request": "^2.87.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.9.0"
   }
 }
