@@ -65,11 +65,14 @@ app.get("/saved", function (req, res) {
     Article.find({
         "saved": true
     }).populate("notes").exec(function (error, articles) {
-        var hbsObject = {
-            article: articles
-        };
+        if (error) {
+        console.log(error)
+         } else {
+            var hbsObject = {
+                article: articles
+                     };
         res.render("saved", hbsObject);
-    });
+    };
 });
 
 app.get("/scrape", function (req, res) {
@@ -144,8 +147,8 @@ app.post("/articles/save/:id", function (req, res) {
         })
         .exec(function (err, doc) {
 
-            if (err) {
-                console.log(err);
+            if (error) {
+                console.log(error);
             } else {
 
                 res.send(doc);
